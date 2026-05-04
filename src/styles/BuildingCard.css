@@ -1,0 +1,118 @@
+.building-card {
+  width: 100%;
+  min-width: 0;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  transition: all 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.building-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
+  border-color: #c4b5fd;
+  transform: translateY(-3px);
+}
+
+.building-card:active {
+  transform: scale(0.98);
+}
+
+/* ── Image wrapper ── */
+.building-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  flex: 0 0 165px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.building-card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.building-card:hover .building-card-image {
+  transform: scale(1.05);
+}
+
+.building-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+.building-card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  right: 48px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* ── Info section ── */
+.building-card-info {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  background: white;
+}
+
+/* ── Crowd status — HERO ── */
+.building-card-crowd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  letter-spacing: -0.2px;
+}
+
+/* ── Meta row ── */
+.building-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px 10px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.building-card-spots-count {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #7c3aed;
+  background: #ede9fe;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.building-card-updated {
+  font-size: 0.68rem;
+  font-weight: 600;
+}

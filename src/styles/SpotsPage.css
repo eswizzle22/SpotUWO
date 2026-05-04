@@ -1,0 +1,28 @@
+.spots-grid-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 32px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 1200px) {
+  .spots-grid-wrapper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .spots-grid-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .spots-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
