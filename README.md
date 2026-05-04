@@ -1,73 +1,37 @@
-# React + TypeScript + Vite
+# SpotUWO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SpotUWO is a React + TypeScript web app that helps Western University students find available study spots in real time.
 
-Currently, two official plugins are available:
+Finding a study spot on campus is a common challenge for university students. Students often spend more time searching than actually studying, spending 20–30 minutes walking between buildings, checking each floor, just to find all the spots already taken. This problem is emphasized during midterms and finals, leading to increased stress levels, and precious time wasted. SpotUWO addresses this issue by providing user-sourced, real-time updates on study spot availability across campus. The web app currently includes live updates for 13 buildings on Western's campus, with further information on different spots per building. This allows students to open the app, check the availability, and head straight to studying with ease. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Interactive campus map using Leaflet + OpenStreetMap
+- Building-level study spot listings
+- User-sourced availability updates
+- location verification checks when submitting updates
+- Upvote/Downvote system to verify users' live updates
+- Filters for location and preferences (e.g. “near me”)
+- User engagement and incentivization system with points
+- Persistent data using localStorage
 
-## React Compiler
+## Tech Stack
+- React + TypeScript
+- Tailwind CSS
+- Leaflet + OpenStreetMap
+- Vite
+- Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Background
+This project was completed by myself and one teammate during the ADA Mentorship Program part of the Women+ in Technology Society at Western University. 
 
-## Expanding the ESLint configuration
+## My Contribution
+Developed the frontend architecture using React and TypeScript, implemented the interactive map with custom markers, created layout and visuals for study spot page, built the study spot data structure and filtering system, and designed the user interface and experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Live Demo
+https://drive.google.com/file/d/1qqUkLYFWALhbLRkIJaQT1jeLSQgeGnd5/view?usp=sharing 
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Deployed App
+https://spot-uwo.vercel.app/ 
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
