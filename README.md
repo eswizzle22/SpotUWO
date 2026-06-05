@@ -5,6 +5,7 @@ Finding a study spot on campus is a common challenge for university students. St
 
 ## Links
 Live demo: https://drive.google.com/file/d/1qqUkLYFWALhbLRkIJaQT1jeLSQgeGnd5/view?usp=sharing 
+
 Deployed App: https://spot-uwo.vercel.app/ 
 
 ## Screenshots
